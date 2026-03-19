@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacific Horizon Hotel</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+   
+    
+</head>
+<body>
+   <header class="encabezado">
+    <div class="container">
+    <img src="{% static 'assets/golden gate.jpg' %}" alt="Imagen de San Francisco" >
+    <div class="logo">
+        <img src="{% static 'assets/logo hotel.png' %}" alt="Logo hotel">
+    </div>
+    </div>
+    
+    <section class="titulo">
+        <h1>Pacific Horizon Hotel</h1>
+        <p>Bienvenidos al <em>Pacific Horizon Hotel</em>, tu hogar en el corazon de San Francisco. <br>
+        Disfruta de la ciudad de la niebla desde el lugar perfecto</p>
+    </section>
+    <section class="nav">
+        <a href="{% url 'inicio'%}">Inicio</a>
+        <a href="{% url 'noticias'%}">Noticias</a>
+        <a href="{% url 'reservar' %}">Reserva</a>
+    </section>
+   
+    
+
+   </header>
+
+   <main class="centro">
+    <section class="bloque">
+        <p class="eslogan">"A pocos minutos del corazon de San Francisco"</p>
+        <div class="img-izq">
+            <img src="{% static 'assets/173304-San-Francisco.webp' %}" alt="City Hall San Francisco">
+            <p>Sumérgete en más de un siglo de historia visitando nuestro Ayuntamiento, donde cada rincón guarda un pedacito del pasado, presente y futuro de nuestra ciudad. <br>
+                A 2km del hotel. 
+            <br>
+            <br><br>
+            <a  href="{% url 'reservar' %}">Reserva</a></p>
+            
+        </div>
+        <div class="img-der">
+            <img src="{% static 'assets/nov-2-2019-san-francisco-600nw-1550068043.webp' %}" alt="Chase center">
+            <p>Vive el mejor baloncesto del planeta a tan solo un par de pasos. Enloquece con los triples de Stephen Curry, los bloqueos de Draymond Green junto con el resto de plantilla de los Golden State Warriors. <br>
+            A 1km del hotel.
+            <br>
+            <br>
+            <a  href="{% url 'reservar'%}">Reserva</a></p>
+        </div>
+        <div class="img-centro">
+            <img src="{% static 'assets/teatro.jpg' %}" alt="Orpheus teatro">
+            <img src="{% static 'assets/alcatraz.webp' %}" alt="Isla alcatraz">
+            <img src="{% static 'assets/nfl.jpg' %}" alt="nfl">
+            <p>Disfruta del resto de maravillas que existen en nuestra ciudad como la NFL, teatro o visita la famosa isla de alcatraz entre otras maravillas...</p>
+        </div>
+        
+    </main>
+
+    <footer>
+        <div class="footer-container">
+        
+        <div class="logo-abajo">
+            <img src="{% static 'assets/logo hotel.png' %}" alt="logo hotel">
+        </div>
+
+        
+        <div class="contacto-texto">
+            
+            <p>Horarios: <br>
+                 Lunes a Viernes: 9:00-14:00 / 17:00-21:00 <br>
+                 Sábado y Domingo: 9:00-14:00</p>
+                 <p>Teléfono: 98357628</p>
+        </div>
+
+        
+        <div class="contacto-derecha">
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;"><center>Encuentranos en: <br> 1234 Lombard Street
+        San Francisco, CA 94109
+        USA</center></p>
+        </div>
+    </div>
+      
+    </footer>
+   
+</body>
+</html>

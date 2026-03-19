@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias</title>
+    <link rel="stylesheet" href="{% static 'CSS/noticias/styles-noticias.css' %}">
+</head>
+<body>
+    <header class="encabezado">
+    <div class="container">
+    <img src="/static/assets/golden gate.jpg" alt="Imagen de San Francisco" >
+    <div class="logo">
+        <img src="/static/assets/logo hotel.png" alt="Logo hotel">
+    </div>
+    </div>
+    
+    <section class="titulo">
+        <h1>Pacific Horizon Hotel</h1>
+        <p>Bienvenidos al <em>Pacific Horizon Hotel</em>, tu hogar en el corazon de San Francisco. <br>
+        Disfruta de la ciudad de la niebla desde el lugar perfecto</p>
+    </section>
+    <section class="nav">
+        <a href="{% url 'inicio'%}">Inicio</a>
+        <a href="{% url 'noticias'%}">Noticias</a>
+        <a href="{% url 'reservar' %}">Reserva</a>
+    </section>
+   
+    
+
+   </header>
+
+   <main>
+    <h2>Ultimas noticias</h2>
+    <section id="noticias">
+    
+    <article class="noticia">
+         <h3>{{noticia.titulo}}</h3>
+         <p>{{noticia.texto_noticia}}</p>
+         <small>Publicado el: {{noticia.fecha}}</small>
+         <a href="{% url 'noticias' %}">Atras</a>
+    </article>
+    
+    </section>
+    
+   </main>
+
+    <footer>
+        <div class="footer-container">
+        
+        <div class="logo-abajo">
+            <img src="/static/assets/logo hotel.png" alt="logo hotel">
+        </div>
+
+        
+        <div class="contacto-texto">
+            
+            <p>Horarios: <br>
+                 Lunes a Viernes: 9:00-14:00 / 17:00-21:00 <br>
+                 Sábado y Domingo: 9:00-14:00</p>
+                 <p>Teléfono: 98357628</p>
+        </div>
+
+        
+        <div class="contacto-derecha">
+            <p style="font-family: Georgia, 'Times New Roman', Times, serif;"><center>Encuentranos en: <br> 1234 Lombard Street
+        San Francisco, CA 94109
+        USA</center></p>
+        </div>
+    </div>
+      
+    </footer>
+</body>
+</html>
